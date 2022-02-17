@@ -1,0 +1,131 @@
+
+app-blogs{
+    width: 100%;
+}
+
+ h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 8px 0;
+  }
+
+  p {
+    margin: 0;
+  }
+
+h1{
+    text-align: left;
+    margin: 0px 0px;
+}
+
+.header-one{
+    width: 100%;
+}
+
+.blog-post-button{
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #2f5B22;
+    background-color: #7cd273;
+    border-radius: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    text-align: center;
+}
+
+/* Responsive Styles */
+   @media screen and (min-width: 767px) {
+        .vertical-inline-flex {
+            flex-direction: column;
+            top: 14%;
+            position: relative;
+        }
+    }
+
+.margin-5{
+    margin: 5px;
+}
+
+.page-section{
+    width: 100%;
+    margin: 10px 0px 10px 0px;
+}
+
+.page-section-header{
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #B2ABA5;
+    background-color: #F2F0ED;
+    margin: 0px;
+}
+
+.page-section-body{
+    padding: 15px;
+    border: 1px solid #B2ABA5;
+    border-style: none none solid none;
+}
+
+.test{
+    width: 200px;
+    height: 200px;
+    background-color: yellow;
+    color: white;
+}
+
+.terminal {
+    position: relative;
+    width: 100%;
+    border-radius: 6px;
+    padding-top: 45px;
+    margin-top: 8px;
+    overflow: hidden;
+    background-color: rgb(15, 15, 16);
+  }
+
+  .terminal::before {
+    content: "\2022 \2022 \2022";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 4px;
+    background: rgb(58, 58, 58);
+    color: #c2c3c4;
+    width: 100%;
+    font-size: 2rem;
+    line-height: 0;
+    padding: 14px 0;
+    text-indent: 4px;
+  }
+
+  .terminal pre {
+    font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
+    color: white;
+    padding: 0 1rem 1rem;
+    margin: 0;
+  }
+
+  .text-align-center{
+      text-align: center;
+  }
+
+   /* Responsive Styles */
+   @media screen and (max-width: 767px) {
+
+    .terminal {
+      width: 100%;
+    }
+
+  }
+
+  .vertical-inline-flex{
+    display: inline-flex;
+    width: 100%;
+    margin-top: 10px;
+}
+
+  .width-100{
+      width: 100%;
+  }

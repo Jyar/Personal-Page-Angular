@@ -1,0 +1,134 @@
+ .content {
+    display: flex;
+    margin: 82px auto 32px;
+    padding: 0 16px;
+    max-width: 960px;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .vertical-inline-flex{
+    display: inline-flex;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.inline-flex{
+    display: inline-flex;
+    margin-right: 10px;
+}
+
+
+.blog-post-button{
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #2f5B22;
+    background-color: #7cd273;
+    border-radius: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    text-align: center;
+}
+
+/* Responsive Styles */
+   @media screen and (min-width: 767px) {
+        .vertical-inline-flex {
+            flex-direction: column;
+            top: 14%;
+            position: relative;
+        }
+    }
+
+.margin-5{
+    margin: 5px;
+}
+
+.margin-20{
+    margin: 20px;
+}
+
+.preview{
+    margin-top: 25px;
+    margin-bottom: 5px;
+    font-weight: 640;
+}
+
+.text-align-center{
+      text-align: center;
+  }
+
+// .test{
+//     width: 200px;
+//     height: 200px;
+//     background-color: yellow;
+//     color: white;
+// }
+.title{
+    font-size: 22px;
+    font-weight: bold;
+    width: 80%;
+    margin: 5px;
+    margin-bottom: 15px;
+}
+
+.subtitle{
+    font-weight: 500;
+    margin-right: 5px;
+}
+
+.subtitles-container{
+    display:inline-flex;
+}
+
+.terminal {
+    position: relative;
+    width: 100%;
+    border-radius: 6px;
+    overflow: hidden;
+    border: 1px solid #2f5B22;
+    background-color: rgb(240,240,240);
+    opacity: 0.7;
+    min-height: 275px;
+  }
+
+//   .terminal::before {
+//     content: "";
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     height: 4px;
+//     background: rgb(58, 58, 58);
+//     color: #c2c3c4;
+//     width: 100%;
+//     font-size: 2rem;
+//     line-height: 0;
+//     padding: 14px 0;
+//     text-indent: 4px;
+//   }
+
+  .terminal pre {
+    font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
+    color: white;
+    padding: 0 1rem 1rem;
+    margin: 0;
+  }
+
+   /* Responsive Styles */
+   @media screen and (max-width: 767px) {
+
+    .terminal {
+      width: 100%;
+    }
+    .subtitles-container{
+            display: block;
+        }
+
+    .subtitle{
+       display: contents;
+    }
+
+   }
+   
+   .width-100{
+       width: 100%;
+   }

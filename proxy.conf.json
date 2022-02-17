@@ -1,0 +1,10 @@
+{
+    "/mediumapi": {
+      "target": "https://medium.com/feed/@jy.codes1",
+      "secure": true,
+      "changeOrigin": true,
+      "pathRewrite": {
+        "^/mediumapi": ""
+      }
+    }
+  }

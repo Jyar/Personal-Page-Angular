@@ -1,0 +1,71 @@
+
+<h1 class= "text-align-center">Blogs</h1>
+  <input type="hidden" #blogpostpreview>
+  <div class = "row width-100" >
+ 
+    <div class ="col-md-10">
+        <div class="terminal" [ngSwitch]="blogpostpreview.value">
+            
+                <div *ngSwitchDefault [@enterTrigger]="'fadeIn'">
+                    <div class = "margin-20">
+                        <div class ="title">{{blogOne?.title}}</div>
+                            <div class="subtitles-container">
+                                <div class="inline-flex">
+                                    <div class ="subtitle">Categories: </div> {{blogOne?.category}} 
+                                
+                                </div>
+                                <div class="inline-flex"><div class ="subtitle">Published On: </div> {{blogOne?.pubDate}}</div>
+                            </div>
+                        <div class ="preview">Preview:</div>
+                        <p>"{{restrictTextLength(blogOne?.['content:encoded'])}}"</p>
+                        <div><a href ={{blogOne?.link}} target="_blank">Link to Blog</a></div>
+                    </div>
+                </div>
+                <div *ngSwitchCase="'2'"[@enterTrigger]="'fadeIn'">
+                    <div class = "margin-20">
+                        <div class ="title">{{blogTwo?.title}}</div>
+                            <div class="subtitles-container">
+                                <div class="inline-flex">
+                                    <div class ="subtitle">Categories: </div> {{blogTwo?.category}} 
+                                
+                                </div>
+                                <div class="inline-flex"><div class ="subtitle">Published On: </div> {{blogTwo?.pubDate}}</div>
+                            </div>
+                        <div class ="preview">Preview:</div>
+                        <p>"{{restrictTextLength(blogTwo?.['content:encoded'])}}"</p>
+                        <div><a href ={{blogTwo?.link}} target="_blank">Link to Blog</a></div>
+                    </div>
+                </div>
+                <div *ngSwitchCase="'3'" [@enterTrigger]="'fadeIn'">
+                    <div class = "margin-20">
+                        <div class ="title"> {{blogThree?.title}}</div>
+                            <div class="subtitles-container">
+                                <div class="inline-flex">
+                                    <div class ="subtitle">Categories: </div> {{blogThree?.category}} 
+                                
+                                </div>
+                                <div class="inline-flex"><div class ="subtitle">Published On: </div> {{blogThree?.pubDate}}</div>
+                            </div>
+                        <div class ="preview">Preview:</div>
+                        <p>"{{restrictTextLength(blogThree?.['content:encoded'])}}"</p>
+                        <div><a href ={{blogThree?.link}} target="_blank">Link to Blog</a></div>
+                    </div>
+                </div>
+
+        </div>
+    </div>
+
+    <div class = "col-md-2">
+        <div class = "vertical-inline-flex">
+            <div class= "blog-post-button margin-5" (click)="blogpostpreview.value = 'component'">
+                <span> blog post 1</span>
+            </div>
+            <div class= "blog-post-button margin-5" (click)="blogpostpreview.value = '2'">
+                <span> blog post 2</span>
+            </div>
+            <div class= "blog-post-button margin-5" (click)="blogpostpreview.value = '3'">
+                <span> blog post 3</span>
+            </div>
+        </div>
+    </div>
+  </div>
