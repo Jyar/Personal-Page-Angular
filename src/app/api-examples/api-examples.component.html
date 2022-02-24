@@ -2,19 +2,20 @@
     <button mat-button (click)="accordion.openAll()">Expand All</button>
     <button mat-button (click)="accordion.closeAll()">Collapse All</button>
   </div>
+
+  <div *ngFor ='let book of books; trackBy: trackByBookCode'>{{book.title}}</div>
+
   <mat-accordion class="example-headers-align" multi>
     <mat-expansion-panel>
       <mat-expansion-panel-header>
-       
+        API #1:
       </mat-expansion-panel-header>
-  
+      {{catData}}
     </mat-expansion-panel>
-    <mat-expansion-panel disabled>
+    <mat-expansion-panel >
       <mat-expansion-panel-header>
-       
+        API #2:
       </mat-expansion-panel-header>
-  
-
     </mat-expansion-panel>
   
     <mat-expansion-panel>
@@ -26,7 +27,6 @@
           Inform the date you wish to travel
         </mat-panel-description>
       </mat-expansion-panel-header>
-  
-      
     </mat-expansion-panel>
+
   </mat-accordion>
