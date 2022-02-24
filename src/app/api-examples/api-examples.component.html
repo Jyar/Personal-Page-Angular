@@ -8,25 +8,53 @@
   <mat-accordion class="example-headers-align" multi>
     <mat-expansion-panel>
       <mat-expansion-panel-header>
-        API #1:
+        <mat-panel-title>
+          API #1: 
+        </mat-panel-title>
+        <mat-panel-description>Cat Facts </mat-panel-description>
       </mat-expansion-panel-header>
       {{catData}}
     </mat-expansion-panel>
+
     <mat-expansion-panel >
       <mat-expansion-panel-header>
-        API #2:
+        <mat-panel-title>
+          API #2: 
+        </mat-panel-title>
+        <mat-panel-description>Random Activity </mat-panel-description>
       </mat-expansion-panel-header>
+      {{randomActivity}}
     </mat-expansion-panel>
-  
+    
     <mat-expansion-panel>
       <mat-expansion-panel-header>
         <mat-panel-title>
-          Day of the trip
+          API #3: 
         </mat-panel-title>
         <mat-panel-description>
-          Inform the date you wish to travel
+          {{bitcoinPrice.chartName}} Prices
         </mat-panel-description>
       </mat-expansion-panel-header>
+      <ul>
+        <li>
+         USD: ${{bitcoinPrice.bpi.USD.rate}}
+        </li>
+        <li>
+          British Pound: ${{bitcoinPrice.bpi.GBP.rate}}
+        </li>
+        <li>
+          Euro: ${{bitcoinPrice.bpi.EUR.rate}}
+        </li>
+      </ul>
+    </mat-expansion-panel>
+    <mat-expansion-panel >
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          API #4: 
+        </mat-panel-title>
+        <mat-panel-description>Dog Photo </mat-panel-description>
+      </mat-expansion-panel-header>
+      <img src={{dogPicture.message}}> 
     </mat-expansion-panel>
 
   </mat-accordion>

@@ -13,6 +13,9 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 export class ApiExamplesComponent{
   books: any[];
   catData: any;
+  randomActivity: any;
+  bitcoinPrice: any;
+  dogPicture: any;
   // catData: Observable<CatFact>;
   @ViewChild(MatAccordion) accordion!: MatAccordion;
 
@@ -41,6 +44,28 @@ export class ApiExamplesComponent{
        this.catData = JSON.parse(data).fact
         );
     });
+
+    //randomActivity
+    this.getRandomActivity().subscribe(data => {
+      console.log(
+       this.randomActivity = JSON.parse(data).activity
+        );
+    });
+    
+    //getUSData
+    this.getBitcoinPrice().subscribe(data => {
+      console.log(
+       this.bitcoinPrice = JSON.parse(data)
+        );
+    });
+
+    //getDogPicture
+    this.getDogPicture().subscribe(data => {
+      console.log(
+       this.dogPicture = JSON.parse(data)
+        );
+    });
+
   }
 
   getCatFacts(){
@@ -49,9 +74,36 @@ export class ApiExamplesComponent{
         responseType: "text"
       };
       return this.http
-        .get<any>('https://catfact.ninja/fact', requestOptions);
-      
+        .get<any>('https://catfact.ninja/fact', requestOptions);   
   }
+
+  getRandomActivity(){
+    const requestOptions: Object = {
+      observe: "body",
+      responseType: "text"
+    };
+    return this.http
+      .get<any>('https://www.boredapi.com/api/activity', requestOptions);   
+}
+
+getBitcoinPrice(){
+  const requestOptions: Object = {
+    observe: "body",
+    responseType: "text"
+  };
+  return this.http
+    .get<any>('https://api.coindesk.com/v1/bpi/currentprice.json', requestOptions);   
+}
+
+
+getDogPicture(){
+  const requestOptions: Object = {
+    observe: "body",
+    responseType: "text"
+  };
+  return this.http
+    .get<any>('https://dog.ceo/api/breeds/image/random', requestOptions);   
+}
 
   trackByBookCode(index: number, book: any): string {
     return book.title;
