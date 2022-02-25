@@ -32,18 +32,18 @@
           API #3: 
         </mat-panel-title>
         <mat-panel-description>
-          {{bitcoinPrice.chartName}} Prices
+          {{bitcoinPrice.chartName?bitcoinPrice.chartName:''}} Prices
         </mat-panel-description>
       </mat-expansion-panel-header>
       <ul>
         <li>
-         USD: ${{bitcoinPrice.bpi.USD.rate}}
+         USD: ${{bitcoinPrice.bpi.USD.rate?bitcoinPrice.bpi.USD.rate:''}}
         </li>
         <li>
-          British Pound: ${{bitcoinPrice.bpi.GBP.rate}}
+          British Pound: ${{bitcoinPrice.bpi.GBP.rate?bitcoinPrice.bpi.GBP.rate:''}}
         </li>
         <li>
-          Euro: ${{bitcoinPrice.bpi.EUR.rate}}
+          Euro: ${{bitcoinPrice.bpi.EUR.rate?bitcoinPrice.bpi.EUR.rate:''}}
         </li>
       </ul>
     </mat-expansion-panel>
@@ -55,7 +55,7 @@
         <mat-panel-description>Dog Photo </mat-panel-description>
       </mat-expansion-panel-header>
       <div class="dogPicture">
-        <img class="cropped" src={{dogPicture.message}}> 
+        <img class="cropped" src={{dogPicture.message?dogPicture.message:null}}> 
       </div>
     </mat-expansion-panel>
 

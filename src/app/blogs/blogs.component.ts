@@ -51,6 +51,7 @@ export class BlogsComponent implements OnInit {
 
     this.mediumService.GetRssFeedData().subscribe(data => {
         let parseString = xml2js.parseString;
+        console.log(data);
         parseString(data, (err, result: NewsRss) => {
           this.RssData = result;
         });
