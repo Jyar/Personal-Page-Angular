@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Observable , throwError } from 'rxjs';
+import { config, Observable , throwError } from 'rxjs';
 import { catchError, retry, tap } from 'rxjs/operators';
 
 @Injectable()
@@ -17,6 +17,9 @@ export class HttpService {
       observe: "body",
       responseType: "text"
     };
+    if (window.location.host !== 'localhost:4200'){
+      this.configUrl = 'https://medium.com/feed/@jy.codes1';
+    }
     return this.http
       .get<any>(this.configUrl, requestOptions);
     
