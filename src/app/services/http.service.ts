@@ -5,10 +5,10 @@ import { catchError, retry, tap } from 'rxjs/operators';
 
 @Injectable()
 export class HttpService {
-    configUrl: string = 'http://localhost:4200/mediumapi';
+    configUrl: string = 'http://' + window.location.host + '/mediumapi';
 
     constructor(private http: HttpClient){
-
+        
     }
 
    
