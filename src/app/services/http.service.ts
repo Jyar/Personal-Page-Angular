@@ -17,9 +17,6 @@ export class HttpService {
       observe: "body",
       responseType: "text"
     };
-    if (window.location.host !== 'localhost:4200'){
-      this.configUrl = 'https://medium.com/feed/@jy.codes1';
-    }
     return this.http
       .get<any>(this.configUrl, requestOptions);
     
