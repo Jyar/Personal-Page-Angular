@@ -12,10 +12,10 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 })
 export class ApiExamplesComponent{
   books: any[];
-  catData: any;
-  randomActivity: any;
-  bitcoinPrice: any;
-  dogPicture: any;
+  catData: any = '';
+  randomActivity: any = '';
+  bitcoinPrice: any = '';
+  dogPicture: any = '';
   // catData: Observable<CatFact>;
   @ViewChild(MatAccordion) accordion!: MatAccordion;
 

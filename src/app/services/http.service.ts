@@ -5,7 +5,7 @@ import { catchError, retry, tap } from 'rxjs/operators';
 
 @Injectable()
 export class HttpService {
-    configUrl: string = 'http://' + window.location.host + '/mediumapi';
+    configUrl: string = window.location.protocol + '//' + window.location.host + '/mediumapi';
 
     constructor(private http: HttpClient){
         
