@@ -24,3 +24,20 @@
     width: 50%;
     height: 50%;
   }
+
+  .example-action-buttons{
+    display: flex;
+  }
+
+  .expansion-panel-button{
+    margin-right: 8px;
+  }
+
+  .mat-success {
+    background-color: green;
+    color: #fff;
+  }
+
+  .padding-ten{
+    padding: 10px;
+  }
