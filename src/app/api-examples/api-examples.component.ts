@@ -27,7 +27,7 @@ export class ApiExamplesComponent implements OnInit, AfterViewInit{
   tiles: Tile[];
 
   //Three
-  @ViewChild('canvas') private canvasRef: ElementRef;
+  @ViewChild('canvas') private canvasRef: any = null;
   @Input() public RotationSpeedX: number = 0.03;
   @Input() public rotationSpeedY: number = 0.02;
   @Input() public size: number = 200;
