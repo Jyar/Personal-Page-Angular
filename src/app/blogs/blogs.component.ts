@@ -36,6 +36,7 @@ export class BlogsComponent implements OnInit {
   constructor(private mediumService: HttpService) {
   }
 
+  //clean 
  strip_tags(str: string) {
     return str.replace(/<\/?[^>]+>/gi, '');
 }
