@@ -20,6 +20,11 @@
     text-align:center;
   }
 
+  #canvas{
+    height: round(90%); 
+    width: round(90%);
+  }
+
   .cropped{
     width: 50%;
     height: 50%;
