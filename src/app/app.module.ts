@@ -15,7 +15,8 @@ import { HttpService } from './services/http.service';
 import { FloatingChatComponent } from './floating-chat/floating-chat.component';
 import { HomepageComponent } from './homepage/homepage.component';
 
-import { APIExamplesModule } from './api-examples/api-examples.module'
+import { APIExamplesModule } from './api-examples/api-examples.module';
+import { PremierLeagueComponent } from './premier-league/premier-league.component'
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { APIExamplesModule } from './api-examples/api-examples.module'
     BubbleLinksComponent,
     BlogsComponent,
     FloatingChatComponent,
-    HomepageComponent
+    HomepageComponent,
+    PremierLeagueComponent
   ],
   imports: [
     BrowserModule,
