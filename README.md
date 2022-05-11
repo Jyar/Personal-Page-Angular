@@ -1,5 +1,7 @@
 Personal Project made with Angular 
 
+Please check this out on Netlify! ---> https://jyar.netlify.app
+
 #To run local use:
 ng serve --proxy-config proxy.conf.json
 
